@@ -1,7 +1,7 @@
 ﻿import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import PageWrapper from '../components/PageWrapper';
-import { ChevronRight, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export default function Home() {
   const testimonials = [

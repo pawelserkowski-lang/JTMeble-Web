@@ -4,7 +4,6 @@ import { ChevronLeft, ShoppingCart, Check } from 'lucide-react';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageWrapper from '../components/PageWrapper';
-import toast from 'react-hot-toast';
 import catalog from '../data/catalog.json';
 import { useCartStore, type Product } from '../store/useCartStore';
 
