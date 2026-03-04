@@ -49,7 +49,7 @@ export default function Home() {
             className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight"
           >
             Tworzymy{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-amber-300">
               przestrzeń
             </span>{' '}
             Twoich marzeń
@@ -72,7 +72,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               Nasze Specjalizacje
             </h2>
-            <div className="mt-4 w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+            <div className="mt-4 w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -124,7 +124,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               Opinie naszych klientów
             </h2>
-            <div className="mt-4 w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+            <div className="mt-4 w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, idx) => (
@@ -132,7 +132,7 @@ export default function Home() {
                 key={idx}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700"
               >
-                <div className="flex text-orange-400 mb-4">
+                <div className="flex text-blue-500 mb-4">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} size={18} fill="currentColor" />
                   ))}
@@ -155,7 +155,7 @@ export default function Home() {
               { number: 'Zadowoleni', label: 'Klienci w całej Polsce' },
             ].map((stat, idx) => (
               <div key={idx} className="p-6">
-                <div className="text-4xl md:text-5xl font-bold text-orange-500 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-400 font-medium uppercase tracking-wider text-sm">

@@ -22,7 +22,7 @@ export default function Contact() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Skontaktuj się z nami
           </h1>
-          <div className="w-24 h-1 bg-orange-500 rounded-full mb-10"></div>
+          <div className="w-24 h-1 bg-blue-600 rounded-full mb-10"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
@@ -37,7 +37,7 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
                     required
                   />
                 </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                   <input
                     type="email"
                     name="email"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
                     required
                   />
                 </div>
@@ -59,13 +59,13 @@ export default function Contact() {
                   <textarea
                     name="message"
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
                     required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl flex items-center justify-center transition-colors"
+                  className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center transition-colors"
                 >
                   Wyślij wiadomość <Send size={18} className="ml-2" />
                 </button>
@@ -79,7 +79,7 @@ export default function Contact() {
                 </h3>
                 <ul className="space-y-6 text-gray-600 dark:text-gray-300">
                   <li className="flex items-start">
-                    <MapPin className="text-orange-500 mr-4 mt-1" size={24} />{' '}
+                    <MapPin className="text-blue-600 mr-4 mt-1" size={24} />{' '}
                     <div>
                       <strong>Adres:</strong>
                       <br />
@@ -89,7 +89,7 @@ export default function Contact() {
                     </div>
                   </li>
                   <li className="flex items-center">
-                    <Phone className="text-orange-500 mr-4" size={24} />{' '}
+                    <Phone className="text-blue-600 mr-4" size={24} />{' '}
                     <div>
                       <strong>Telefon:</strong>
                       <br />
@@ -97,7 +97,7 @@ export default function Contact() {
                     </div>
                   </li>
                   <li className="flex items-center">
-                    <Mail className="text-orange-500 mr-4" size={24} />{' '}
+                    <Mail className="text-blue-600 mr-4" size={24} />{' '}
                     <div>
                       <strong>E-mail:</strong>
                       <br />

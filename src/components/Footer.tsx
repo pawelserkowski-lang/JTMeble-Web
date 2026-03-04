@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img src="/images/logo.png" alt="JTMeble Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" onError={(e) => { e.currentTarget.style.display='none'; (e.currentTarget.nextElementSibling as HTMLElement).style.display='block'; }} />
-              <span style={{display: 'none'}} className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">JT<span className="text-orange-500 font-medium">Meble.</span></span>
+              <span style={{display: 'none'}} className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">JT<span className="text-blue-600 font-medium">Meble.</span></span>
             </div>
             <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-sm">
               Tworzymy funkcjonalne i estetyczne meble na wymiar. Jakość i precyzja to nasze
@@ -20,13 +20,13 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Kontakt</h4>
             <ul className="space-y-4 text-gray-600 dark:text-gray-400">
               <li className="flex items-center">
-                <Phone size={20} className="mr-3 text-orange-500" /> +48 123 456 789
+                <Phone size={20} className="mr-3 text-blue-600" /> +48 123 456 789
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-3 text-orange-500" /> kontakt@jtmebel.pl
+                <Mail size={20} className="mr-3 text-blue-600" /> kontakt@jtmebel.pl
               </li>
               <li className="flex items-center">
-                <MapPin size={20} className="mr-3 text-orange-500" /> ul. Przykładowa 12, Polska
+                <MapPin size={20} className="mr-3 text-blue-600" /> ul. Przykładowa 12, Polska
               </li>
             </ul>
           </div>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
                   Strona główna
                 </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/oferta"
-                  className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
                   Oferta
                 </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/kontakt"
-                  className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
                   Kontakt
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
                 <a
                   href="/files/Nowy_Katalog_JTMeble.pdf"
                   target="_blank"
-                  className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors font-medium"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors font-medium"
                 >
                   Katalog PDF
                 </a>

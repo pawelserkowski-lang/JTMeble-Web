@@ -39,7 +39,7 @@ export default function Colors() {
       <div className="pt-24 pb-16 min-h-screen">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Konfigurator Kolorów</h1>
-          <div className="w-24 h-1 bg-orange-500 rounded-full mb-10"></div>
+          <div className="w-24 h-1 bg-blue-600 rounded-full mb-10"></div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
@@ -47,7 +47,7 @@ export default function Colors() {
                 <h3 className="text-xl font-bold mb-4">Wybierz kolor płyty: {board.name}</h3>
                 <div className="flex flex-wrap gap-4">
                   {boards.map(b => (
-                    <button key={b.name} onClick={() => setBoard(b)} title={b.name} className={`w-12 h-12 rounded-full border-2 shadow-sm transition-transform hover:scale-110 ${board.name === b.name ? 'border-orange-500 scale-110' : 'border-gray-300 dark:border-gray-600'}`} style={{ backgroundColor: b.color }} />
+                    <button key={b.name} onClick={() => setBoard(b)} title={b.name} className={`w-12 h-12 rounded-full border-2 shadow-sm transition-transform hover:scale-110 ${board.name === b.name ? 'border-blue-600 scale-110' : 'border-gray-300 dark:border-gray-600'}`} style={{ backgroundColor: b.color }} />
                   ))}
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default function Colors() {
                 <h3 className="text-xl font-bold mb-4">Wybierz kolor stelaża: {frame.name}</h3>
                 <div className="flex flex-wrap gap-4">
                   {frames.map(f => (
-                    <button key={f.name} onClick={() => setFrame(f)} title={f.name} className={`w-12 h-12 rounded-full border-2 shadow-sm transition-transform hover:scale-110 ${frame.name === f.name ? 'border-orange-500 scale-110' : 'border-gray-300 dark:border-gray-600'}`} style={{ backgroundColor: f.color }} />
+                    <button key={f.name} onClick={() => setFrame(f)} title={f.name} className={`w-12 h-12 rounded-full border-2 shadow-sm transition-transform hover:scale-110 ${frame.name === f.name ? 'border-blue-600 scale-110' : 'border-gray-300 dark:border-gray-600'}`} style={{ backgroundColor: f.color }} />
                   ))}
                 </div>
               </div>

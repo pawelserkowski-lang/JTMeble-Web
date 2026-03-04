@@ -11,6 +11,7 @@ import Category from './pages/Category';
 import Contact from './pages/Contact';
 import Laboratoria from './pages/Laboratoria';
 import Calculator from './pages/Calculator';
+import Blog from './pages/Blog';
 import Colors from './pages/Colors';
 
 function AnimatedRoutes() {
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
         <Route path="/laboratoria" element={<Laboratoria />} />
         <Route path="/kalkulator" element={<Calculator />} />
         <Route path="/kolory" element={<Colors />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </AnimatePresence>
   );

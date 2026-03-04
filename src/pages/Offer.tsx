@@ -21,7 +21,7 @@ export default function Offer() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Pełna oferta i kategorie</h1>
-          <div className="w-24 h-1 bg-orange-500 rounded-full mb-10"></div>
+          <div className="w-24 h-1 bg-blue-600 rounded-full mb-10"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {catalog.categories.map((category) => (
@@ -30,8 +30,8 @@ export default function Offer() {
                   whileHover={{ y: -5, scale: 1.02 }}
                   className="bg-gray-50 border border-gray-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all cursor-pointer h-full flex flex-col items-center justify-center group"
                 >
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-orange-50 transition-colors">
-                    <span className="text-orange-500 font-bold">{category.title.charAt(0)}</span>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-blue-50 transition-colors">
+                    <span className="text-blue-600 font-bold">{category.title.charAt(0)}</span>
                   </div>
                   <h3 className="font-semibold text-gray-800 text-sm">{category.title}</h3>
                 </motion.div>

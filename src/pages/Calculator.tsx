@@ -27,7 +27,7 @@ export default function Calculator() {
           transition={{ duration: 0.5 }}
         >
           <div className="text-center mb-10">
-            <div className="w-16 h-16 bg-orange-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <CalcIcon size={32} />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -48,16 +48,16 @@ export default function Calculator() {
                 value={area}
                 onChange={(e) => setArea(Number(e.target.value))}
                 placeholder="np. 50"
-                className="w-full px-4 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                className="w-full px-4 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-lg focus:ring-2 focus:ring-blue-600 outline-none"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-orange-50 dark:bg-orange-500/10 p-6 rounded-2xl border border-orange-100 dark:border-orange-500/20 text-center">
-                <span className="block text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+              <div className="bg-blue-50 dark:bg-blue-600/10 p-6 rounded-2xl border border-blue-100 dark:border-blue-600/20 text-center">
+                <span className="block text-4xl font-bold text-blue-700 dark:text-blue-500 mb-2">
                   {desks}
                 </span>
-                <span className="text-sm font-medium text-orange-800 dark:text-orange-300">
+                <span className="text-sm font-medium text-orange-800 dark:text-blue-400">
                   Stanowisk pracy
                   <br />
                   (Biurko + Fotel)

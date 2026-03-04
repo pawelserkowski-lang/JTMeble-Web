@@ -27,7 +27,7 @@ export default function Laboratoria() {
       title: 'Stacje Lutownicze',
       icon: <Lightbulb size={32} />,
       desc: 'Bezpieczne stacje lutownicze i akcesoria do elektroniki.',
-      color: 'bg-orange-500',
+      color: 'bg-blue-600',
     },
   ];
 
@@ -49,7 +49,7 @@ export default function Laboratoria() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Laboratoria Przyszłości
           </h1>
-          <div className="w-24 h-1 bg-orange-500 rounded-full mb-10"></div>
+          <div className="w-24 h-1 bg-blue-600 rounded-full mb-10"></div>
 
           <div className="mb-16">
             <div className="bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-gray-800 text-center shadow-sm">

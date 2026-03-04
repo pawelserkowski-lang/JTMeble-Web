@@ -110,25 +110,25 @@ export default function CartDrawer() {
                     name="name"
                     placeholder="Imię i nazwisko"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
                   />
                   <input
                     type="email"
                     name="email"
                     placeholder="Adres E-mail"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
                   />
                   <textarea
                     name="message"
                     placeholder="Dodatkowe uwagi (opcjonalnie)"
                     rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
                   ></textarea>
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="w-full py-4 bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white font-bold rounded-xl flex items-center justify-center transition-colors"
+                    className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-500 text-white font-bold rounded-xl flex items-center justify-center transition-colors"
                   >
                     {status === 'sending' ? (
                       'Wysyłanie...'

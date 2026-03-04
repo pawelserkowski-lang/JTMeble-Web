@@ -19,7 +19,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-6">O nas</h1>
-          <div className="w-24 h-1 bg-orange-500 rounded-full mb-10"></div>
+          <div className="w-24 h-1 bg-blue-600 rounded-full mb-10"></div>
 
           <div className="prose prose-lg text-gray-600">
             <p className="lead text-xl">

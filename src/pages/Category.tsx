@@ -27,7 +27,7 @@ export default function Category() {
     return (
       <div className="pt-32 text-center min-h-screen dark:bg-gray-950 dark:text-white">
         <h1 className="text-3xl font-bold">Kategoria nie znaleziona</h1>
-        <Link to="/oferta" className="text-orange-500 mt-4 inline-block hover:underline">
+        <Link to="/oferta" className="text-blue-600 mt-4 inline-block hover:underline">
           Wróć do oferty
         </Link>
       </div>
@@ -43,7 +43,7 @@ export default function Category() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           to="/oferta"
-          className="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-orange-500 mb-8 transition-colors"
+          className="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 mb-8 transition-colors"
         >
           <ChevronLeft size={20} className="mr-1" /> Wróć do pełnej oferty
         </Link>
@@ -97,10 +97,10 @@ export default function Category() {
                           {product.name}
                         </h3>
                         <div className="flex items-center justify-between mt-4">
-                          <span className="text-orange-500 font-bold">{product.price} PLN</span>
+                          <span className="text-blue-600 font-bold">{product.price} PLN</span>
                           <button
                             onClick={() => handleAdd(product)}
-                            className={`p-2 rounded-lg transition-colors ${addedItems[product.id] || cartItems.find((i) => i.id === product.id) ? 'bg-green-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-orange-500 hover:text-white'}`}
+                            className={`p-2 rounded-lg transition-colors ${addedItems[product.id] || cartItems.find((i) => i.id === product.id) ? 'bg-green-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white'}`}
                             title="Dodaj do zapytania"
                           >
                             {addedItems[product.id] ||
