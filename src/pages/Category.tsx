@@ -2,6 +2,9 @@
 import { motion } from 'motion/react';
 import { ChevronLeft, ShoppingCart, Check } from 'lucide-react';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import PageWrapper from '../components/PageWrapper';
+import toast from 'react-hot-toast';
 import catalog from '../data/catalog.json';
 import { useCartStore, type Product } from '../store/useCartStore';
 
@@ -33,7 +36,11 @@ export default function Category() {
   }
 
   return (
-    <div className="pt-24 pb-16 bg-gray-50 dark:bg-gray-950 min-h-screen transition-colors">
+    <PageWrapper>
+      <Helmet>
+        <title>{category.title} - JTMeble</title>
+      </Helmet>
+      <div className="pt-24 pb-16 bg-gray-50 dark:bg-gray-950 min-h-screen transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           to="/oferta"
@@ -120,5 +127,6 @@ export default function Category() {
         </motion.div>
       </div>
     </div>
+      </PageWrapper>
   );
 }

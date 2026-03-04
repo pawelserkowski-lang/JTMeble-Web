@@ -1,4 +1,6 @@
 ﻿import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
+import PageWrapper from '../components/PageWrapper';
 import { Lightbulb, Code, BookOpen, Monitor } from 'lucide-react';
 
 export default function Laboratoria() {
@@ -30,7 +32,14 @@ export default function Laboratoria() {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-white dark:bg-gray-950 min-h-screen transition-colors">
+    <PageWrapper>
+      <Helmet>
+        <title>Laboratoria Przyszłości - JTMeble</title>
+        <meta name="description" content="Zrealizuj z nami program Laboratoria Przyszłości. Dostarczamy sprzęt do druku 3D, robotyki i multimediów." />
+        <meta property="og:title" content="Laboratoria Przyszłości - JTMeble" />
+        <meta property="og:description" content="Zrealizuj z nami program Laboratoria Przyszłości. Dostarczamy sprzęt do druku 3D, robotyki i multimediów." />
+      </Helmet>
+<div className="page-content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,5 +100,6 @@ export default function Laboratoria() {
         </motion.div>
       </div>
     </div>
+</PageWrapper>
   );
 }

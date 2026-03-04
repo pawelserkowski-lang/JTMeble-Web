@@ -41,12 +41,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="bg-gradient-to-br from-orange-400 to-orange-600 text-white p-2 rounded-xl shadow-md group-hover:shadow-orange-500/20 transition-all duration-300 group-hover:-translate-y-0.5">
-                <Armchair size={22} strokeWidth={2.5} />
-              </div>
-              <span className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white hidden sm:block">
-                JT<span className="text-orange-500 font-medium">Meble.</span>
-              </span>
+              <img src="/images/logo.png" alt="JTMeble Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" onError={(e) => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='block'; }} />
+              <span style={{display: 'none'}} className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">JT<span className="text-orange-500 font-medium">Meble.</span></span>
             </Link>
           </div>
 
@@ -204,4 +200,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 

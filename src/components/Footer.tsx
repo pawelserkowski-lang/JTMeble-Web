@@ -8,12 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-orange-500 p-2 rounded-xl shadow-md">
-                <Armchair size={22} strokeWidth={2.5} />
-              </div>
-              <span className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">
-                JT<span className="text-orange-500 font-medium">Meble.</span>
-              </span>
+              <img src="/images/logo.png" alt="JTMeble Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" onError={(e) => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='block'; }} />
+              <span style={{display: 'none'}} className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">JT<span className="text-orange-500 font-medium">Meble.</span></span>
             </div>
             <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-sm">
               Tworzymy funkcjonalne i estetyczne meble na wymiar. Jakość i precyzja to nasze

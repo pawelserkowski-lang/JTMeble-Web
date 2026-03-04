@@ -1,8 +1,17 @@
 ﻿import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
+import PageWrapper from '../components/PageWrapper';
 
 export default function About() {
   return (
-    <div className="pt-24 pb-16 bg-white min-h-screen">
+    <PageWrapper>
+      <Helmet>
+        <title>O nas - JTMeble</title>
+        <meta name="description" content="Poznaj historię firmy JTMeble. Od ponad dekady zajmujemy się produkcją certyfikowanych mebli dla szkół i przedszkoli." />
+        <meta property="og:title" content="O nas - JTMeble" />
+        <meta property="og:description" content="Poznaj historię firmy JTMeble. Od ponad dekady zajmujemy się produkcją certyfikowanych mebli dla szkół i przedszkoli." />
+      </Helmet>
+<div className="page-content">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,5 +53,6 @@ export default function About() {
         </motion.div>
       </div>
     </div>
+</PageWrapper>
   );
 }

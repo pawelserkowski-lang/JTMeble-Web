@@ -1,10 +1,19 @@
 ﻿import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
+import PageWrapper from '../components/PageWrapper';
 import { Link } from 'react-router-dom';
 import catalog from '../data/catalog.json';
 
 export default function Offer() {
   return (
-    <div className="pt-24 pb-16 bg-white min-h-screen">
+    <PageWrapper>
+      <Helmet>
+        <title>Pełna Oferta - JTMeble</title>
+        <meta name="description" content="Zobacz pełną ofertę ponad 1100 mebli: od biurek, przez szafki, aż po meble dla przedszkoli i szkół." />
+        <meta property="og:title" content="Pełna Oferta - JTMeble" />
+        <meta property="og:description" content="Zobacz pełną ofertę ponad 1100 mebli: od biurek, przez szafki, aż po meble dla przedszkoli i szkół." />
+      </Helmet>
+<div className="page-content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,5 +41,6 @@ export default function Offer() {
         </motion.div>
       </div>
     </div>
+</PageWrapper>
   );
 }

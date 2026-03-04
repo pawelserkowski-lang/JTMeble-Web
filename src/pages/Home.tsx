@@ -1,9 +1,33 @@
 ﻿import { motion } from 'motion/react';
-import { ChevronRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import PageWrapper from '../components/PageWrapper';
+import { ChevronRight, Star } from 'lucide-react';
 
 export default function Home() {
+  const testimonials = [
+    {
+      name: 'Dyrektor SP nr 4',
+      text: 'Znakomite meble, które przetrwają lata. Dzieci są zachwycone kolorami, a nauczyciele ergonomią.',
+    },
+    {
+      name: 'Przedszkole "Słoneczko"',
+      text: 'Zamówiliśmy pełne wyposażenie szatni. Świetny kontakt, szybka realizacja i najwyższa jakość.',
+    },
+    {
+      name: 'Firma IT',
+      text: 'Biurka z regulacją wysokości od JTMeble to strzał w dziesiątkę. Nasi pracownicy chwalą sobie wygodę.',
+    },
+  ];
+
   return (
-    <>
+    <PageWrapper>
+      <Helmet>
+        <title>JTMeble - Nowoczesne meble szkolne, biurowe i przedszkolne</title>
+        <meta name="description" content="Meble na wymiar najwyższej jakości. Od projektu po montaż. Zadbamy o każdy detal w Twoim domu i biurze." />
+        <meta property="og:title" content="JTMeble - Nowoczesne meble szkolne, biurowe i przedszkolne" />
+        <meta property="og:description" content="Meble na wymiar najwyższej jakości. Od projektu po montaż. Zadbamy o każdy detal w Twoim domu i biurze." />
+      </Helmet>
+<div className="page-content">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
@@ -17,7 +41,6 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
-
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -40,28 +63,16 @@ export default function Home() {
             Meble na wymiar najwyższej jakości. Od projektu po montaż. Zadbamy o każdy detal w Twoim
             domu i biurze.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-medium text-lg transition-colors flex items-center justify-center group">
-              Zobacz ofertę
-              <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </motion.div>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-gray-950 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Nasze Specjalizacje</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+              Nasze Specjalizacje
+            </h2>
             <div className="mt-4 w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
-            <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-              Projektujemy i wykonujemy meble dostosowane do Twoich potrzeb.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -106,6 +117,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Opinions Section */}
+      <section className="py-24 bg-gray-50 dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800 transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+              Opinie naszych klientów
+            </h2>
+            <div className="mt-4 w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((t, idx) => (
+              <div
+                key={idx}
+                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700"
+              >
+                <div className="flex text-orange-400 mb-4">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} size={18} fill="currentColor" />
+                  ))}
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 italic mb-6">"{t.text}"</p>
+                <div className="font-bold text-gray-900 dark:text-white">{t.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -127,6 +166,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
+</PageWrapper>
   );
 }

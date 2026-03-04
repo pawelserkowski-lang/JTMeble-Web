@@ -1,9 +1,18 @@
 ﻿import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
+import PageWrapper from '../components/PageWrapper';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="pt-24 pb-16 bg-gray-50 dark:bg-gray-950 min-h-screen transition-colors">
+    <PageWrapper>
+      <Helmet>
+        <title>Kontakt - JTMeble</title>
+        <meta name="description" content="Skontaktuj się z nami. Oferujemy pełne doradztwo w zakresie mebli na wymiar i wyposażenia biur." />
+        <meta property="og:title" content="Kontakt - JTMeble" />
+        <meta property="og:description" content="Skontaktuj się z nami. Oferujemy pełne doradztwo w zakresie mebli na wymiar i wyposażenia biur." />
+      </Helmet>
+<div className="page-content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,5 +120,6 @@ export default function Contact() {
         </motion.div>
       </div>
     </div>
+</PageWrapper>
   );
 }
