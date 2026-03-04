@@ -1,4 +1,5 @@
-﻿{
+{
+  "name": "jtmeble-web",
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",

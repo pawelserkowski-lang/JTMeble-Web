@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Menu, X, Phone, Mail, MapPin, Armchair } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
+import Offer from './pages/Offer';
+import Category from './pages/Category';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,6 +75,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/o-nas" element={<About />} />
+            <Route path="/oferta" element={<Offer />} />
+            <Route path="/oferta/:slug" element={<Category />} />
           </Routes>
         </main>
 
