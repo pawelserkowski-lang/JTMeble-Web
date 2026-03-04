@@ -1,6 +1,6 @@
 ﻿import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Armchair } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 
@@ -14,8 +14,13 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               <div className="flex-shrink-0 flex items-center">
-                <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">
-                  JT<span className="text-orange-500">Meble</span>
+                <Link to="/" className="flex items-center gap-2 group">
+                  <div className="bg-gradient-to-br from-orange-400 to-orange-600 text-white p-2 rounded-xl shadow-md group-hover:shadow-orange-500/20 transition-all duration-300 group-hover:-translate-y-0.5">
+                    <Armchair size={22} strokeWidth={2.5} />
+                  </div>
+                  <span className="text-2xl font-black tracking-tighter text-gray-900">
+                    JT<span className="text-orange-500 font-medium">Meble.</span>
+                  </span>
                 </Link>
               </div>
               <div className="hidden md:flex space-x-8">
