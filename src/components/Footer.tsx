@@ -8,37 +8,81 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/images/logo.png" alt="JTMeble Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" onError={(e) => { e.currentTarget.style.display='none'; (e.currentTarget.nextElementSibling as HTMLElement).style.display='block'; }} />
-              <span style={{display: 'none'}} className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">JT<span className="text-blue-600 font-medium">Meble.</span></span>
+              <img src="/images/logo.png" alt="JT Mebel Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" onError={(e) => { e.currentTarget.style.display='none'; (e.currentTarget.nextElementSibling as HTMLElement).style.display='block'; }} />
+              <span style={{display: 'none'}} className="text-2xl font-black tracking-tighter text-gray-900 dark:text-white">JT<span className="text-blue-600 font-medium">Mebel.</span></span>
             </div>
             <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-sm">
-              Tworzymy funkcjonalne i estetyczne meble na wymiar. Jakość i precyzja to nasze
-              priorytety w każdym projekcie.
+              Od lat specjalizujemy się w produkcji wysokiej jakości mebli dla placówek edukacyjnych. Jesteśmy polskim producentem z siedzibą w Kartuzach.
             </p>
           </div>
           <div>
             <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Kontakt</h4>
             <ul className="space-y-4 text-gray-600 dark:text-gray-400">
               <li className="flex items-center">
-                <Phone size={20} className="mr-3 text-blue-600" /> +48 123 456 789
+                <Phone size={20} className="mr-3 text-blue-600" /> 58 684 75 25
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-3 text-blue-600" /> kontakt@jtmebel.pl
+                <Mail size={20} className="mr-3 text-blue-600" /> biuro@jtmebel.pl
               </li>
               <li className="flex items-center">
-                <MapPin size={20} className="mr-3 text-blue-600" /> ul. Przykładowa 12, Polska
+                <MapPin size={20} className="mr-3 text-blue-600" /> ul. Gdańska 45, 83-300 Kartuzy, Polska
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Szybkie linki</h4>
+            <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Informacje</h4>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/"
+                  to="/regulamin"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
-                  Strona główna
+                  Regulamin
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/dostawa"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  Dostawa
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/platnosci"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  Płatności
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zwroty-i-reklamacje"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  Zwroty i reklamacje
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/polityka-prywatnosci"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  Polityka prywatności
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Dla klienta</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/o-nas"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  O nas
                 </Link>
               </li>
               <li>
@@ -54,7 +98,7 @@ export default function Footer() {
                   to="/kontakt"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
-                  Kontakt
+                  Dział sprzedaży / Kontakt
                 </Link>
               </li>
               <li>
@@ -65,6 +109,14 @@ export default function Footer() {
                 >
                   Katalog PDF
                 </a>
+              </li>
+              <li>
+                <Link
+                  to="/kolory"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  Kolory płyt i stelaży
+                </Link>
               </li>
             </ul>
           </div>

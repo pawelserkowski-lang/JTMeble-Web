@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import PageWrapper from '../components/PageWrapper';
 import { Calendar, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const posts = [
   { id: 1, title: 'Wdrażamy nowy system mebli modułowych', date: '2026-03-01', author: 'Zespół JTMeble', excerpt: 'Nasza najnowsza kolekcja stawia na elastyczność. Zobacz, jak łatwo dopasować przestrzeń do dynamicznego środowiska biurowego.', image: '/images/product-2.jpg' },
@@ -33,7 +34,9 @@ export default function Blog() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">{post.excerpt}</p>
-                  <button className="text-blue-600 dark:text-blue-400 font-semibold text-sm hover:underline mt-auto text-left">Czytaj więcej &rarr;</button>
+                  <Link to={`/blog/${post.id}`} className="text-blue-600 dark:text-blue-400 font-semibold text-sm hover:underline mt-auto text-left">
+                    Czytaj więcej &rarr;
+                  </Link>
                 </div>
               </motion.article>
             ))}

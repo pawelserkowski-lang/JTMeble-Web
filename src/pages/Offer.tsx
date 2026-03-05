@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import PageWrapper from '../components/PageWrapper';
 import { Link } from 'react-router-dom';
@@ -28,12 +28,21 @@ export default function Offer() {
               <Link to={`/oferta/${category.slug}`} key={category.id}>
                 <motion.div
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="bg-gray-50 border border-gray-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all cursor-pointer h-full flex flex-col items-center justify-center group"
+                  className="bg-white border border-gray-100 rounded-xl p-0 text-center shadow-sm hover:shadow-lg transition-all cursor-pointer h-full flex flex-col overflow-hidden group"
                 >
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-blue-50 transition-colors">
-                    <span className="text-blue-600 font-bold">{category.title.charAt(0)}</span>
+                  <div className="h-40 w-full bg-gray-50 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      onError={(e) => {
+                        e.currentTarget.src = '/images/hero-bg-1.jpg';
+                      }}
+                    />
                   </div>
-                  <h3 className="font-semibold text-gray-800 text-sm">{category.title}</h3>
+                  <div className="p-4 flex-grow flex items-center justify-center">
+                    <h3 className="font-semibold text-gray-800 text-sm group-hover:text-blue-600 transition-colors">{category.title}</h3>
+                  </div>
                 </motion.div>
               </Link>
             ))}

@@ -14,6 +14,14 @@ import Calculator from './pages/Calculator';
 import Blog from './pages/Blog';
 import Catalog from './pages/Catalog';
 import Colors from './pages/Colors';
+import Regulamin from './pages/Regulamin';
+import Dostawa from './pages/Dostawa';
+import Platnosci from './pages/Platnosci';
+import ZwrotyIReklamacje from './pages/ZwrotyIReklamacje';
+import PolitykaPrywatnosci from './pages/PolitykaPrywatnosci';
+import Checkout from './pages/Checkout';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -30,6 +38,14 @@ function AnimatedRoutes() {
         <Route path="/kalkulator" element={<Calculator />} />
         <Route path="/kolory" element={<Colors />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/regulamin" element={<Regulamin />} />
+        <Route path="/dostawa" element={<Dostawa />} />
+        <Route path="/platnosci" element={<Platnosci />} />
+        <Route path="/zwroty-i-reklamacje" element={<ZwrotyIReklamacje />} />
+        <Route path="/polityka-prywatnosci" element={<PolitykaPrywatnosci />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profil" element={<Profile />} />
       </Routes>
     </AnimatePresence>
   );

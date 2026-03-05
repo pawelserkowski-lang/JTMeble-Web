@@ -6,10 +6,10 @@ export default function About() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>O nas - JTMeble</title>
-        <meta name="description" content="Poznaj historię firmy JTMeble. Od ponad dekady zajmujemy się produkcją certyfikowanych mebli dla szkół i przedszkoli." />
-        <meta property="og:title" content="O nas - JTMeble" />
-        <meta property="og:description" content="Poznaj historię firmy JTMeble. Od ponad dekady zajmujemy się produkcją certyfikowanych mebli dla szkół i przedszkoli." />
+        <title>O nas - JT Mebel</title>
+        <meta name="description" content="Poznaj historię firmy JT Mebel. Od lat zajmujemy się produkcją certyfikowanych mebli dla szkół, przedszkoli i instytucji." />
+        <meta property="og:title" content="O nas - JT Mebel" />
+        <meta property="og:description" content="Poznaj historię firmy JT Mebel. Od lat zajmujemy się produkcją certyfikowanych mebli dla szkół, przedszkoli i instytucji." />
       </Helmet>
 <div className="page-content">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,20 +23,17 @@ export default function About() {
 
           <div className="prose prose-lg text-gray-600">
             <p className="lead text-xl">
-              JTMeble to firma z wieloletnią tradycją, która od ponad dekady zajmuje się tworzeniem
-              mebli na wymiar dla domów i biur.
+              JT Mebel to firma z wieloletnią tradycją, która od wielu lat specjalizuje się w seryjnej produkcji
+              mebli dla placówek edukacyjnych i instytucji.
             </p>
             <p>
-              Nasza historia zaczęła się z pasji do drewna i chęci tworzenia rozwiązań, które łączą
-              w sobie doskonały design, najwyższą jakość wykonania oraz pełną funkcjonalność.
-              Projektując meble, nieustannie śledzimy najnowsze trendy oraz innowacyjne rozwiązania
-              technologiczne, aby dostarczać naszym klientom produkty, które spełniają ich najwyższe
-              oczekiwania.
+              Nasza historia to ciągły rozwój i dążenie do doskonałości. Wyposażyliśmy w nasze certyfikowane 
+              meble tysiące sal lekcyjnych, przedszkoli i biur. Kładziemy ogromny nacisk na ergonomię, 
+              bezpieczeństwo użytkowania oraz wytrzymałość naszych wyrobów, aby służyły przez wiele lat.
             </p>
             <p>
-              Oferujemy kompleksowe usługi – od pierwszych pomiarów i projektowania, po precyzyjną
-              produkcję i profesjonalny montaż u klienta. Nasz zespół składa się z doświadczonych
-              projektantów i stolarzy, którzy każdemu projektowi poświęcają maksimum uwagi.
+              Oferujemy kompleksowe usługi – od doradztwa i projektu, po produkcję i dostawę własnym transportem. 
+              Posiadamy nowoczesny park maszynowy, który gwarantuje najwyższą jakość wykonania.
             </p>
             <div className="mt-10 rounded-2xl overflow-hidden shadow-lg h-80">
               <img
@@ -50,6 +47,42 @@ export default function About() {
               />
             </div>
           </div>
+
+          <div className="mt-20 mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Nasze realizacje</h2>
+            <div className="w-16 h-1 bg-blue-600 rounded-full mb-8"></div>
+            <p className="text-gray-600 dark:text-gray-400 mb-10 text-lg">
+              Zobacz wybrane realizacje dla szkół i przedszkoli na terenie Kaszub i całego Pomorza.
+              Dzięki własnej flocie transportowej i doświadczonej ekipie montażowej, dostarczamy i skręcamy meble prosto w docelowych salach lekcyjnych.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { img: '/images/hero-bg-1.jpg', title: 'Szkoła Podstawowa w Kartuzach' },
+                { img: '/images/hero-bg-2.jpg', title: 'Kompleks przedszkolny na Kaszubach' },
+                { img: '/images/hero-bg-3.jpg', title: 'Nowoczesna sala w Gdańsku' },
+                { img: '/images/hero-bg-5.jpg', title: 'Biblioteka szkolna' },
+                { img: '/images/hero-bg-6.jpg', title: 'Wielofunkcyjna szatnia uczniowska' },
+                { img: '/images/product-2.jpg', title: 'Gabinety administracyjne' }
+              ].map((item, idx) => (
+                <motion.div 
+                  key={idx} 
+                  whileHover={{ scale: 1.03 }}
+                  className="relative h-64 rounded-xl overflow-hidden shadow-sm group border border-gray-100 dark:border-gray-800"
+                >
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    onError={(e) => { e.currentTarget.src = '/images/hero-bg-1.jpg'; }} 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                    <h3 className="text-white font-semibold text-lg drop-shadow-md">{item.title}</h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
         </motion.div>
       </div>
     </div>

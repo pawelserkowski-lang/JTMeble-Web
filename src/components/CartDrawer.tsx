@@ -1,66 +1,50 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Trash2, Send, Download } from 'lucide-react';
+import { X, Trash2, Download, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { useCartStore } from '../store/useCartStore';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 
 export default function CartDrawer() {
-  const { items, isOpen, toggleCart, removeItem, clearCart } = useCartStore();
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+  const { items, isOpen, toggleCart, removeItem, updateQuantity } = useCartStore();
+  const [isGenerating, setIsGenerating] = useState(false);
+  const navigate = useNavigate();
 
-  const generatePDF = () => {
-    const doc = new jsPDF();
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(20);
-    doc.text('Zapytanie Ofertowe - JTMeble', 20, 20);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(12);
-    doc.text('Data wygenerowania: ' + new Date().toLocaleDateString('pl-PL'), 20, 30);
-    doc.setFontSize(14);
-    doc.text('Lista wybranych produktow:', 20, 45);
-    let yPos = 55;
-    items.forEach((item, index) => {
-      const cleanName = item.name.replace(/[¹æê³ñóœŸ¿¥ÆÊ£ÑÓŒ¯]/g, match => {
-        const dict: Record<string, string> = { '¹':'a', 'æ':'c', 'ê':'e', '³':'l', 'ñ':'n', 'ó':'o', 'œ':'s', 'Ÿ':'z', '¿':'z', '¥':'A', 'Æ':'C', 'Ê':'E', '£':'L', 'Ñ':'N', 'Ó':'O', 'Œ':'S', '':'Z', '¯':'Z' };
-        return dict[match] || match;
-      });
-      doc.setFontSize(11);
-      const textLine = index + 1 + '. ' + cleanName;
-      const splitText = doc.splitTextToSize(textLine, 170);
-      doc.text(splitText, 20, yPos);
-      yPos += 7 * splitText.length;
-      if (yPos > 270) { doc.addPage(); yPos = 20; }
-    });
-    doc.setFontSize(10);
-    doc.text('Wygenerowano automatycznie z systemu JTMeble', 20, 290);
-    doc.save('zapytanie_ofertowe_jtmeble.pdf');
-  };
+  const totalNetto = items.reduce((acc, item) => acc + (item.price || 0) * (item.quantity || 1), 0);
 
-  const handleSend = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus('sending');
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message'),
-      products: items.map((i) => i.name).join(', '),
-    };
+  const generatePDF = async () => {
+    setIsGenerating(true);
+    // Symulacja opÃ³Åºnienia, aby pokazaÄ‡ loader podczas Å‚adowania duÅ¼ych paczek
+    await new Promise(resolve => setTimeout(resolve, 800));
 
     try {
-      await fetch('https://formspree.io/f/mrgvoyab', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+      const doc = new jsPDF();
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(20);
+      doc.text('Zapytanie Ofertowe - JTMeble', 20, 20);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(12);
+      doc.text(`Data wygenerowania: ${new Date().toLocaleDateString('pl-PL')}`, 20, 30);
+      doc.setFontSize(14);
+      doc.text('Lista wybranych produktow:', 20, 45);
+      let yPos = 55;
+      items.forEach((item, index) => {
+        const cleanName = item.name.replace(/[Ä…Ä‡Ä™Å‚Å„Ã³Å›ÅºÅ¼Ä„Ä†Ä˜ÅÅƒÃ“ÅšÅ¹Å»]/g, match => {
+          const dict: Record<string, string> = { 'Ä…':'a', 'Ä‡':'c', 'Ä™':'e', 'Å‚':'l', 'Å„':'n', 'Ã³':'o', 'Å›':'s', 'Åº':'z', 'Å¼':'z', 'Ä„':'A', 'Ä†':'C', 'Ä˜':'E', 'Å':'L', 'Åƒ':'N', 'Ã“':'O', 'Åš':'S', 'Å¹':'Z', 'Å»':'Z' };
+          return dict[match] || match;
+        });
+        doc.setFontSize(11);
+        const textLine = index + 1 + '. ' + cleanName;
+        const splitText = doc.splitTextToSize(textLine, 170);
+        doc.text(splitText, 20, yPos);
+        yPos += 7 * splitText.length;
+        if (yPos > 270) { doc.addPage(); yPos = 20; }
       });
-      setStatus('success');
-      setTimeout(() => {
-        setStatus('idle');
-        clearCart();
-        toggleCart();
-      }, 3000);
-    } catch (err) {
-      setStatus('idle');
+      doc.setFontSize(10);
+      doc.text('Wygenerowano automatycznie z systemu JTMeble', 20, 290);
+      doc.save('zapytanie_ofertowe_jtmeble.pdf');
+    } finally {
+      setIsGenerating(false);
     }
   };
 
@@ -97,7 +81,7 @@ export default function CartDrawer() {
             <div className="flex-1 overflow-y-auto p-6">
               {items.length === 0 ? (
                 <div className="text-center text-gray-500 dark:text-gray-400 mt-10">
-                  <p>Brak produktów na liœcie zapytania.</p>
+                  <p>Brak produktÃ³w na liÅ›cie zapytania.</p>
                 </div>
               ) : (
                 <div className="space-y-4 mb-8">
@@ -116,13 +100,25 @@ export default function CartDrawer() {
                         }
                       />
                       <div className="flex-1">
-                        <h4 className="font-semibold text-sm text-gray-900 dark:text-white line-clamp-2">
+                        <h4 className="font-semibold text-sm text-gray-900 dark:text-white line-clamp-2 mb-2">
                           {item.name}
                         </h4>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-bold text-blue-600">{item.price ? `${item.price.toFixed(2)} PLN` : 'Wycena'}</span>
+                          <div className="flex items-center gap-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-1">
+                            <button onClick={() => updateQuantity(item.id, (item.quantity || 1) - 1)} className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">
+                              <Minus size={14} />
+                            </button>
+                            <span className="text-sm font-medium w-4 text-center">{item.quantity || 1}</span>
+                            <button onClick={() => updateQuantity(item.id, (item.quantity || 1) + 1)} className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">
+                              <Plus size={14} />
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <button
                         onClick={() => removeItem(item.id)}
-                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-lg transition-colors"
+                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-lg transition-colors ml-2"
                       >
                         <Trash2 size={18} />
                       </button>
@@ -131,58 +127,42 @@ export default function CartDrawer() {
                 </div>
               )}
 
-              {items.length > 0 && status !== 'success' && (
-                <form onSubmit={handleSend} className="space-y-4">
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">Dane kontaktowe</h3>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Imiê i nazwisko"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Adres E-mail"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
-                  />
-                  <textarea
-                    name="message"
-                    placeholder="Dodatkowe uwagi (opcjonalnie)"
-                    rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 outline-none"
-                  ></textarea>
+              {items.length > 0 && (
+                <div className="border-t border-gray-100 dark:border-gray-800 pt-6 mt-6">
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-lg font-medium text-gray-600 dark:text-gray-400">Suma czÄ™Å›ciowa (netto):</span>
+                    <span className="text-xl font-bold text-gray-900 dark:text-white">{totalNetto.toFixed(2)} PLN</span>
+                  </div>
+                  
                   <div className="grid grid-cols-1 gap-3">
                     <button
-                      type="submit"
-                      disabled={status === 'sending'}
-                      className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-500 text-white font-bold rounded-xl flex items-center justify-center transition-colors"
+                      onClick={() => {
+                        toggleCart();
+                        navigate('/checkout');
+                      }}
+                      className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center transition-colors shadow-sm"
                     >
-                      {status === 'sending' ? (
-                        'Wysy³anie...'
-                      ) : (
-                        <>
-                          <Send size={18} className="mr-2" /> Wyœlij zapytanie
-                        </>
-                      )}
+                      <ShoppingBag size={18} className="mr-2" /> PrzejdÅº do kasy
                     </button>
+                    
                     <button
                       type="button"
                       onClick={generatePDF}
-                      className="w-full py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white font-semibold rounded-xl flex items-center justify-center transition-colors border border-gray-200 dark:border-gray-700"
+                      disabled={isGenerating}
+                      className="w-full py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white font-semibold rounded-xl flex items-center justify-center transition-colors border border-gray-200 dark:border-gray-700 disabled:opacity-50"
                     >
-                      <Download size={18} className="mr-2" /> Pobierz listê jako PDF
+                      {isGenerating ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-800 dark:border-white mr-2"></div>
+                          Generowanie PDF...
+                        </>
+                      ) : (
+                        <>
+                          <Download size={18} className="mr-2" /> Pobierz listÄ™ jako PDF
+                        </>
+                      )}
                     </button>
                   </div>
-                </form>
-              )}
-
-              {status === 'success' && (
-                <div className="bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 p-6 rounded-xl text-center border border-green-100 dark:border-green-800">
-                  <h3 className="font-bold text-lg mb-2">Zapytanie wys³ane!</h3>
-                  <p>Dziêkujemy. Skontaktujemy siê z Tob¹ najszybciej jak to mo¿liwe.</p>
                 </div>
               )}
             </div>
@@ -192,4 +172,3 @@ export default function CartDrawer() {
     </AnimatePresence>
   );
 }
-

@@ -4,24 +4,28 @@ import PageWrapper from '../components/PageWrapper';
 import { motion } from 'motion/react';
 
 const boards = [
+  { name: 'Biały (K110)', color: '#FFFFFF' },
+  { name: 'Kość Słoniowa', color: '#FFFFF0' },
+  { name: 'Popiel / Szary Naturalny', color: '#D3D3D3' },
+  { name: 'Wiąz Toronto', color: '#A0522D' },
+  { name: 'Dąb Sonoma', color: '#D2B48C' },
   { name: 'Buk', color: '#DEB887' },
   { name: 'Klon', color: '#FDF5E6' },
-  { name: 'Dąb Jasny', color: '#D2B48C' },
   { name: 'Olcha', color: '#DAA520' },
-  { name: 'Popiel', color: '#D3D3D3' },
-  { name: 'Biały', color: '#FFFFFF' },
-  { name: 'Niebieski', color: '#4682B4' },
-  { name: 'Zielony', color: '#3CB371' },
-  { name: 'Żółty', color: '#FFD700' },
-  { name: 'Czerwony', color: '#CD5C5C' }
+  { name: 'Czarny (231)', color: '#222222' }
 ];
 
 const frames = [
-  { name: 'Aluminium', color: '#A9A9A9' },
-  { name: 'Czarny', color: '#2F4F4F' },
-  { name: 'Czerwony', color: '#8B0000' },
-  { name: 'Niebieski', color: '#000080' },
-  { name: 'Zielony', color: '#006400' }
+  { name: 'Biały (RAL 9003)', color: '#F4F4F4' },
+  { name: 'Popielaty (RAL 7035)', color: '#C5C7C4' },
+  { name: 'Srebrny (RAL 9006)', color: '#A5A5A5' },
+  { name: 'Szary (RAL 7000)', color: '#78858B' },
+  { name: 'Czarny mat (RAL 9005)', color: '#0A0A0A' },
+  { name: 'Niebieski (RAL 5002)', color: '#20155E' },
+  { name: 'Zielony (RAL 6029)', color: '#007243' },
+  { name: 'Czerwony (RAL 3002)', color: '#9B111E' },
+  { name: 'Żółty (RAL 1007)', color: '#E88C00' },
+  { name: 'Pomarańczowy (RAL 2004)', color: '#E73E01' }
 ];
 
 export default function Colors() {

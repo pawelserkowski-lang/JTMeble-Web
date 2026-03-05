@@ -31,17 +31,17 @@ export default function Calculator() {
               <CalcIcon size={32} />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Kalkulator Powierzchni Biurowej
+              Kalkulator Powierzchni Szkolnej i Biurowej
             </h1>
             <p className="text-gray-600 dark:text-gray-400">
-              Oszacuj, ile stanowisk pracy zmieści się w Twoim nowym biurze.
+              Oszacuj, ile stanowisk pracy lub ławek szkolnych zmieści się w Twoim nowym wnętrzu.
             </p>
           </div>
 
           <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800">
             <div className="mb-8">
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Powierzchnia biura (w metrach kwadratowych)
+                Powierzchnia sali lub biura (w metrach kwadratowych)
               </label>
               <input
                 type="number"
@@ -58,9 +58,9 @@ export default function Calculator() {
                   {desks}
                 </span>
                 <span className="text-sm font-medium text-orange-800 dark:text-blue-400">
-                  Stanowisk pracy
+                  Stanowisk pracy / Ławek
                   <br />
-                  (Biurko + Fotel)
+                  (Biurko + Krzesło)
                 </span>
               </div>
               <div className="bg-blue-50 dark:bg-blue-500/10 p-6 rounded-2xl border border-blue-100 dark:border-blue-500/20 text-center">

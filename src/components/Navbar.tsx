@@ -1,7 +1,8 @@
 ﻿import { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingCart, Moon, Sun, Search, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, ShoppingCart, Moon, Sun, Search, Globe, ChevronDown, User } from 'lucide-react';
 import { useCartStore } from '../store/useCartStore';
+import { useUserStore } from '../store/useUserStore';
 import catalog from '../data/catalog.json';
 import scrapedData from '../data/scraped_products.json';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { items, toggleCart } = useCartStore();
+  const { isLoggedIn } = useUserStore();
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showResults, setShowResults] = useState(false);
@@ -34,7 +36,8 @@ export default function Navbar() {
   }, []);
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'pl' ? 'en' : 'pl');
+    const nextLang = i18n.language === 'pl' ? 'en' : i18n.language === 'en' ? 'de' : 'pl';
+    i18n.changeLanguage(nextLang);
   };
 
   const categories = useMemo(() => {
@@ -201,6 +204,13 @@ export default function Navbar() {
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
+            <Link
+              to={isLoggedIn ? '/profil' : '/login'}
+              className={`p-2 transition-colors ${isLoggedIn ? 'text-blue-600' : 'text-gray-500 hover:text-blue-600'}`}
+              title="Panel B2B"
+            >
+              <User size={24} />
+            </Link>
             <button
               onClick={toggleCart}
               className="relative p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
@@ -277,6 +287,13 @@ export default function Navbar() {
               className="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
             >
               {t('contact')}
+            </Link>
+            <Link
+              to={isLoggedIn ? '/profil' : '/login'}
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+            >
+              Panel B2B
             </Link>
             <div className="pt-4 mt-2 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center px-3">
               <span className="text-gray-500 font-medium">Motyw</span>
