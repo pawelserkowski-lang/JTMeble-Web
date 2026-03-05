@@ -1,4 +1,4 @@
-﻿import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ChevronLeft, ShoppingCart, Check } from 'lucide-react';
 import { useState } from 'react';
@@ -10,7 +10,7 @@ import { useCartStore, type Product } from '../store/useCartStore';
 export default function Category() {
   const { slug } = useParams();
   const category = catalog.categories.find((c) => c.slug === slug);
-  const products = catalog.products.filter((p) => p.categoryId === slug);
+  const products = catalog.products.filter((p) => p.categoryId === slug) as unknown as Product[];
   const addItem = useCartStore((state) => state.addItem);
   const cartItems = useCartStore((state) => state.items);
   const [addedItems, setAddedItems] = useState<Record<number, boolean>>({});
