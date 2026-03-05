@@ -22,12 +22,12 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/hero-bg-newest-tissaia.jpg"
+            src="/images/hero-bg-new-main.jpg"
             alt="Nowoczesne meble"
             className="w-full h-full object-cover opacity-90"
             onError={(e) => {
               e.currentTarget.src =
-                '/images/hero-bg-newest-tissaia.jpg';
+                '/images/hero-bg-new-main.jpg';
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-blue-800/50 to-white backdrop-blur-[1px]" />
