@@ -1,0 +1,613 @@
+{
+  "products": [
+    {
+      "name": "Biurko Office BOF12",
+      "price": "2 740,00 zł",
+      "image": "https://jtmebel.pl/9950-home_default/biurko-office-bof12.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Biurko Manager MA08",
+      "price": "900,00 zł",
+      "image": "https://jtmebel.pl/9993-home_default/biurko-manager-ma08.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Kontenerek GK2",
+      "price": "510,00 zł",
+      "image": "https://jtmebel.pl/7055-home_default/kontenerek-gk2.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Kontener Office KOF15",
+      "price": "960,00 zł",
+      "image": "https://jtmebel.pl/9960-home_default/kontener-office-kof15.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Laptop Dell Pro 16...",
+      "price": "4 200,00 zł",
+      "image": "https://jtmebel.pl/11308-home_default/laptop-dell-pro-16-pc16250-1tb-ssd.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Laptop Dell Latitude 3550...",
+      "price": "2 850,00 zł",
+      "image": "https://jtmebel.pl/11309-home_default/laptop-dell-latitude-3550-16-gb-i5-1345u.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Projektor Optoma DX318e",
+      "price": "2 050,00 zł",
+      "image": "https://jtmebel.pl/4301-home_default/projektor-optoma-dx318e.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Projektor Epson EB-X06",
+      "price": "2 550,00 zł",
+      "image": "https://jtmebel.pl/4593-home_default/projektor-epson-eb-530.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Projektor...",
+      "price": "5 999,00 zł",
+      "image": "https://jtmebel.pl/4605-home_default/projektor-ultrakrotkoogniskowy-optoma-x340ust.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Projektor laserowy Epson...",
+      "price": "8 650,00 zł",
+      "image": "https://jtmebel.pl/4597-home_default/projektor-laserowy-epson-eb-720.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Flipchart StarBoard",
+      "price": "320,00 zł",
+      "image": "https://jtmebel.pl/8454-home_default/flipchart-starboard.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół składany Rico",
+      "price": "790,00 zł",
+      "image": "https://jtmebel.pl/8679-home_default/stol-skladany-rico.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Tablica szkolna ceramiczna...",
+      "price": "680,00 zł",
+      "image": "https://jtmebel.pl/9124-home_default/tablica-szkolna-ceramiczna-biala.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Fotel Gamingowy Race Tilt",
+      "price": "403,00 zł",
+      "image": "https://jtmebel.pl/9118-home_default/fotel-gamingowy-race-tilt.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Fotel Gamingowy Record",
+      "price": "530,00 zł",
+      "image": "https://jtmebel.pl/9119-home_default/fotel-gamingowy-record.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Fotel obrotowy Magnat",
+      "price": "550,00 zł",
+      "image": "https://jtmebel.pl/5492-home_default/fotel-obrotowy-magnat.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Fotel Obrotowy Net Lux",
+      "price": "460,00 zł",
+      "image": "https://jtmebel.pl/6880-home_default/fotel-obrotowy-net-lux.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło OSI tapicerowane/chrom",
+      "price": "175,00 zł",
+      "image": "https://jtmebel.pl/8582-home_default/krzeslo-osi-tapicerowanechrom.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół laboratoryjny ze zlewem 180x60 PROMOCJA",
+      "price": "",
+      "image": "https://jtmebel.pl/11313-default_md/stol-laboratoryjny-ze-zlewem-180x60-promocja.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Tablica obrotowo-jezdna ceramiczna 180x120 PROMOCJA",
+      "price": "",
+      "image": "https://jtmebel.pl/11321-default_md/tablica-obrotowo-jezdna-ceramiczna-180x120-promocja.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Wyprawka plastyczna",
+      "price": "",
+      "image": "https://jtmebel.pl/8483-default_md/wyprawka-plastyczna.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Fotel obrotowy Intrata",
+      "price": "",
+      "image": "https://jtmebel.pl/11413-default_md/fotel-obrotowy-intrata.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Tablica obrotowo-jezdna lakierowana 200x100 ECO",
+      "price": "",
+      "image": "https://jtmebel.pl/11323-default_md/tablica-obrotowo-jezdna-lakierowana-200x100-eco.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Tablica szkolna lakierowana tryptyk - biały",
+      "price": "",
+      "image": "https://jtmebel.pl/5855-default_md/tablica-szkolna-lakierowana-tryptyk-bialy.jpg",
+      "category": "Index",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Zestaw zabawowy Timon City Basic",
+      "price": "",
+      "image": "https://jtmebel.pl/3881-default_md/zestaw-zabawowy-timon-city-basic.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Karuzela tarczowa z siedziskami",
+      "price": "",
+      "image": "https://jtmebel.pl/3826-default_md/karuzela-tarczowa-z-siedziskami.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Karuzela krzyżowa czteroramienna",
+      "price": "",
+      "image": "https://jtmebel.pl/3828-default_md/karuzela-krzyzowa-czteroramienna.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Karuzela trójramienna z siedziskami",
+      "price": "",
+      "image": "https://jtmebel.pl/3830-default_md/karuzela-trojramienna-z-siedziskami.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Lokomotywa z wagonem A",
+      "price": "",
+      "image": "https://jtmebel.pl/3917-default_md/lokomotywa-z-wagonem-a.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Bujak Skuter",
+      "price": "",
+      "image": "https://jtmebel.pl/3749-default_md/bujak-skuter.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z drewna 2x2",
+      "price": "",
+      "image": "https://jtmebel.pl/3847-default_md/piaskownica-kwadratowa-z-drewna-2x2.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z drewna 3x3",
+      "price": "",
+      "image": "https://jtmebel.pl/3846-default_md/piaskownica-kwadratowa-z-drewna-3x3.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z bali 2x2",
+      "price": "",
+      "image": "https://jtmebel.pl/3840-default_md/piaskownica-kwadratowa-z-bali-2x2.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica sześciokątna z bali 2,4 x 2,08",
+      "price": "",
+      "image": "https://jtmebel.pl/3843-default_md/piaskownica-szesciokatna-z-bali-24-x-208.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z bali 2,5 x 2,5",
+      "price": "",
+      "image": "https://jtmebel.pl/3841-default_md/piaskownica-kwadratowa-z-bali-25-x-25.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Zestaw zabawowy Kuki",
+      "price": "",
+      "image": "https://jtmebel.pl/3900-default_md/zestaw-zabawowy-kuki.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica sześciokątna z bali 3x2,6",
+      "price": "",
+      "image": "https://jtmebel.pl/3844-default_md/piaskownica-szesciokatna-z-bali-3x26.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z drewna misie 2x2",
+      "price": "",
+      "image": "https://jtmebel.pl/3850-default_md/piaskownica-kwadratowa-z-drewna-misie-2x2.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z drewna misie 2.5x2.5",
+      "price": "",
+      "image": "https://jtmebel.pl/3851-default_md/piaskownica-kwadratowa-z-drewna-misie-25x25.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Piaskownica kwadratowa z drewna misie 3x3",
+      "price": "",
+      "image": "https://jtmebel.pl/3849-default_md/piaskownica-kwadratowa-z-drewna-misie-3x3.jpg",
+      "category": "322 Plac Zabaw",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Kamil",
+      "price": "",
+      "image": "https://jtmebel.pl/8138-default_md/krzeslo-kamil.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Miś",
+      "price": "",
+      "image": "https://jtmebel.pl/6342-default_md/krzeslo-mis.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Miś z podłokietnikami",
+      "price": "",
+      "image": "https://jtmebel.pl/6344-default_md/krzeslo-mis-z-podlokietnikami.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Miś kolor",
+      "price": "",
+      "image": "https://jtmebel.pl/7539-default_md/krzeslo-mis-kolor.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Classic",
+      "price": "",
+      "image": "https://jtmebel.pl/6582-default_md/krzeslo-classic.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Spider",
+      "price": "",
+      "image": "https://jtmebel.pl/6598-default_md/krzeslo-spider.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Titan jednoczęściowe",
+      "price": "",
+      "image": "https://jtmebel.pl/6233-default_md/krzeslo-titan-jednoczesciowe-.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Titan+ antybakteryjne",
+      "price": "",
+      "image": "https://jtmebel.pl/6231-default_md/krzeslo-titan-antybakteryjne.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło szkolne Ergos",
+      "price": "",
+      "image": "https://jtmebel.pl/6863-default_md/krzeslo-szkolne-ergos.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Krzyś",
+      "price": "",
+      "image": "https://jtmebel.pl/6319-default_md/krzeslo-krzys.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Oskar",
+      "price": "",
+      "image": "https://jtmebel.pl/6830-default_md/krzeslo-oskar.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Bolek",
+      "price": "",
+      "image": "https://jtmebel.pl/6320-default_md/krzeslo-bolek.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło regulowane Krzyś-R",
+      "price": "",
+      "image": "https://jtmebel.pl/6323-default_md/krzeslo-regulowane-krzys-r.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło Skrzat",
+      "price": "",
+      "image": "https://jtmebel.pl/6313-default_md/krzeslo-skrzat.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Krzesło szkolne Ergos PROMOCJA",
+      "price": "",
+      "image": "https://jtmebel.pl/11438-default_md/krzeslo-szkolne-ergos-promocja.jpg",
+      "category": "360 Krzesla Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino sześciokątny",
+      "price": "",
+      "image": "https://jtmebel.pl/6696-default_md/stol-domino-szesciokatny.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino sześciokątny regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6699-default_md/stol-domino-szesciokatny-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino trapezowy",
+      "price": "",
+      "image": "https://jtmebel.pl/6694-default_md/stol-domino-trapezowy.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino trapezowy regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6706-default_md/stol-domino-trapezowy-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino kwadratowy",
+      "price": "",
+      "image": "https://jtmebel.pl/6693-default_md/stol-kwadratowy-domino-.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino kwadratowy regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6709-default_md/stol-domino-kwadratowy-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino okrągły",
+      "price": "",
+      "image": "https://jtmebel.pl/6698-default_md/stol-domino-okragly.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino okrągły regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6700-default_md/stol-domino-okragly-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino DS sześciokątny regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6679-default_md/stol-domino-ds-szesciokatny-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino DO okrągły regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6678-default_md/stol-domino-do-okragly-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino DK kwadratowy regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6676-default_md/stol-domino-dk-kwadratowy-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino DP prostokątny regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6677-default_md/stol-domino-dp-prostokatny-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino prostokątny",
+      "price": "",
+      "image": "https://jtmebel.pl/6695-default_md/stol-domino-prostokatny.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino prostokątny regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/6704-default_md/stol-domino-prostokatny-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino fala",
+      "price": "",
+      "image": "https://jtmebel.pl/5817-default_md/stol-domino-fala.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Stół Domino fala regulowany",
+      "price": "",
+      "image": "https://jtmebel.pl/5827-default_md/stol-domino-fala-regulowany.jpg",
+      "category": "368 Stoly Przedszkolne",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN01",
+      "price": "",
+      "image": "https://jtmebel.pl/7257-default_md/regal-mini-mn01.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN02",
+      "price": "",
+      "image": "https://jtmebel.pl/7259-default_md/regal-mini-mn02.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN03",
+      "price": "",
+      "image": "https://jtmebel.pl/7261-default_md/regal-mini-mn03.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN04",
+      "price": "",
+      "image": "https://jtmebel.pl/7263-default_md/regal-mini-mn04.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN05",
+      "price": "",
+      "image": "https://jtmebel.pl/7265-default_md/regal-mini-mn05.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN06",
+      "price": "",
+      "image": "https://jtmebel.pl/7267-default_md/regal-mini-mn06.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN07",
+      "price": "",
+      "image": "https://jtmebel.pl/7269-default_md/regal-mini-mn07.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał Mini MN08",
+      "price": "",
+      "image": "https://jtmebel.pl/7273-default_md/regal-mini-mn08.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał przewijak Mini MN09",
+      "price": "",
+      "image": "https://jtmebel.pl/7277-default_md/regal-przewijak-mini-mn09.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Regał domek Mini MN10",
+      "price": "",
+      "image": "https://jtmebel.pl/7280-default_md/regal-domek-mini-mn10.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Szafa na nocniki Mini MN11",
+      "price": "",
+      "image": "https://jtmebel.pl/7284-default_md/szafa-na-nocniki-mini-mn11.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Szafa na łóżeczka Mini MN12",
+      "price": "",
+      "image": "https://jtmebel.pl/7286-default_md/szafa-na-lozeczka-mini-mn12.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Półka wisząca Mini MN13",
+      "price": "",
+      "image": "https://jtmebel.pl/7288-default_md/polka-wiszaca-mini-mn13.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Półka Mini MN14",
+      "price": "",
+      "image": "https://jtmebel.pl/7290-default_md/polka-mini-mn14.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Półka Mini MN15",
+      "price": "",
+      "image": "https://jtmebel.pl/7293-default_md/polka-mini-mn15.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    },
+    {
+      "name": "Półka Mini MN16",
+      "price": "",
+      "image": "https://jtmebel.pl/7294-default_md/polka-mini-mn16.jpg",
+      "category": "499 Kolekcja Mini",
+      "description": "Opis zaimportowany ze starej strony."
+    }
+  ]
+}

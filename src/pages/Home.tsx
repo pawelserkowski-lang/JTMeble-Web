@@ -1,7 +1,9 @@
 ﻿import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import PageWrapper from '../components/PageWrapper';
-import { Star } from 'lucide-react';
+import { Star, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import scrapedData from '../data/scraped_products.json';
 
 export default function Home() {
   const testimonials = [
@@ -117,30 +119,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Opinions Section */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800 transition-colors">
+      {/* Recommended Products Slider */}
+      <section className="py-24 bg-gray-50 dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800 transition-colors overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-              Opinie naszych klientów
-            </h2>
-            <div className="mt-4 w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+                Polecane produkty
+              </h2>
+              <div className="mt-4 w-24 h-1 bg-blue-600 rounded-full"></div>
+            </div>
+            <Link to="/katalog" className="hidden sm:flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Zobacz cały katalog <ChevronRight size={20} className="ml-1" />
+            </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((t, idx) => (
-              <div
-                key={idx}
-                className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-700"
+          
+          <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar">
+            {(scrapedData.products || []).slice(0, 8).map((product, idx) => (
+              <motion.div
+                key={`${product.name}-${idx}`}
+                whileHover={{ y: -5 }}
+                className="snap-start flex-none w-[280px] bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden group cursor-pointer"
               >
-                <div className="flex text-blue-500 mb-4">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} size={18} fill="currentColor" />
-                  ))}
+                <div className="aspect-square relative p-6 bg-white flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/images/hero-bg-1.jpg';
+                    }}
+                  />
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 italic mb-6">"{t.text}"</p>
-                <div className="font-bold text-gray-900 dark:text-white">{t.name}</div>
-              </div>
+                <div className="p-5">
+                  <p className="text-xs font-semibold text-blue-600 mb-1 uppercase tracking-wider line-clamp-1">{product.category}</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white line-clamp-2 mb-2" title={product.name}>
+                    {product.name}
+                  </h3>
+                  {product.price && (
+                    <p className="font-medium text-gray-900 dark:text-gray-100">{product.price}</p>
+                  )}
+                </div>
+              </motion.div>
             ))}
+          </div>
+          <div className="mt-4 text-center sm:hidden">
+            <Link to="/katalog" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Zobacz cały katalog <ChevronRight size={20} className="ml-1" />
+            </Link>
           </div>
         </div>
       </section>

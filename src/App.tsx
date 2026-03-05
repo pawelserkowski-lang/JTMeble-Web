@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Laboratoria from './pages/Laboratoria';
 import Calculator from './pages/Calculator';
 import Blog from './pages/Blog';
+import Catalog from './pages/Catalog';
 import Colors from './pages/Colors';
 
 function AnimatedRoutes() {
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/o-nas" element={<About />} />
+        <Route path="/katalog" element={<Catalog />} />
         <Route path="/oferta" element={<Offer />} />
         <Route path="/oferta/:slug" element={<Category />} />
         <Route path="/kontakt" element={<Contact />} />

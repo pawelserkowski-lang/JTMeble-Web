@@ -118,6 +118,12 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <Link
+              to="/katalog"
+              className={`text-sm font-medium transition-colors px-2 py-2 ${isActive('/katalog') ? 'text-blue-600' : 'text-gray-600 dark:text-gray-300 hover:text-blue-600'}`}
+            >
+              Katalog
+            </Link>
+            <Link
               to="/oferta"
               className={`text-sm font-medium transition-colors px-2 py-2 ${isActive('/oferta') ? 'text-blue-600' : 'text-gray-600 dark:text-gray-300 hover:text-blue-600'}`}
             >
